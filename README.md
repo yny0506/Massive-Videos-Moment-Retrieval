@@ -1,6 +1,8 @@
 # MVMR
 MVMR: Evaluating Natural Language Video Localization Bias over Multiple Reliable Videos Pool [arXiv](https://arxiv.org/pdf/2309.16701v1.pdf)
 
+[fig_method.pdf](https://github.com/yny0506/MVMR/files/13279043/fig_method.pdf)
+
 Our work propose the MVMR (Massive Videos Moment Retrieval) task, which aims to localize video frames from a massive set of videos given a text query.
 For this task, we suggest methods for constructing datasets by employing similarity filtering on the existing video localization datasets and introduce three MVMR datasets.
 Specifically, we employ embedding-based text similarity matching and videolanguage grounding techniques to calculate the relevance score between a target query and videos to define positive and negative sets.
