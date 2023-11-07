@@ -60,7 +60,7 @@ Before you run the scripts included in this repository, ensure you have the foll
 1) Datasets
  - The pre-computed off-the-shelf video features for the [Charades-STA](https://prior.allenai.org/projects/charades), [ActivityNet](http://activity-net.org/download.html), [TACoS](https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/research/vision-and-language/tacos-multi-level-corpus)
 
- - You can download the off-the-shelf features from the following link: https://rochester.app.box.com/s/8znalh6y5e82oml2lr7to8s6ntab6mav (provided by [2D-TAN](https://github.com/microsoft/2D-TAN))
+ - You can download the off-the-shelf features from the following link: [Features](https://rochester.app.box.com/s/8znalh6y5e82oml2lr7to8s6ntab6mav) (provided by [2D-TAN](https://github.com/microsoft/2D-TAN))
 
  - You can find the uploaded ground-truth annotation file of each dataset in the 'dataset' folder. These files are the ground-truth files of [2D-TAN](https://github.com/microsoft/2D-TAN).
 
