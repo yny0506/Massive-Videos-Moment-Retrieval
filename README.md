@@ -6,7 +6,7 @@ MVMR: Evaluating Natural Language Video Localization Bias over Multiple Reliable
 
 **Figure. MVMR vs. VCMR.** In existing VCMR studies, only a single golden positive video moment is designated as positive, while entire videos not paired with a specific query are classified as negative.
 Our proposed MVMR filters the positive video moment for a query from the whole video set; thus, it considers more practical and generalized use cases with reliable settings.
-$v^{+}_{i}$ and $v^{-}_{j}$ mean a positive and a negative video, respectively.
+$`v^{+}_{i}`$ and $`v^{-}_{j}`$ mean a positive and a negative video, respectively.
 
 
 Our work propose the MVMR (Massive Videos Moment Retrieval) task, which aims to localize video frames from a massive set of videos given a text query.
