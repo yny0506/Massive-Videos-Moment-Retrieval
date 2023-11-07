@@ -3,6 +3,7 @@ MVMR: Evaluating Natural Language Video Localization Bias over Multiple Reliable
 
 ![image](https://github.com/yny0506/MVMR/assets/107698204/e3c7bde6-e79d-4a24-b9dd-d9456fecde14)
 
+
 **Figure. MVMR vs. VCMR.** In existing VCMR studies, only a single golden positive video moment is designated as positive, while entire videos not paired with a specific query are classified as negative.
 Our proposed MVMR filters the positive video moment for a query from the whole video set; thus, it considers more practical and generalized use cases with reliable settings.
 $v^{+}_{i}$ and $v^{-}_{j}$ mean a positive and a negative video, respectively.
