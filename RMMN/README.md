@@ -14,11 +14,11 @@ Before you run the scripts included in this repository, ensure you have the foll
 2) The pre-trained weights of our RMMN
  - You can download the pre-trained weights for each dataset from the following link:
    
- (a) The RMMN trained with the Charades-STA: http://milabfile.snu.ac.kr:16000/detecting-incongruity/pretrained_weights/best_charades_rmmn.pth
+ (a) The RMMN trained with the Charades-STA: [RMMN_Charades-STA](http://milabfile.snu.ac.kr:16000/detecting-incongruity/pretrained_weights/best_charades_rmmn.pth)
 
- (b) The RMMN trained with the ActivityNet: http://milabfile.snu.ac.kr:16000/detecting-incongruity/pretrained_weights/best_tacos_rmmn.pth
+ (b) The RMMN trained with the ActivityNet: [RMMN_ActivityNet](http://milabfile.snu.ac.kr:16000/detecting-incongruity/pretrained_weights/best_tacos_rmmn.pth)
  
- (c) The RMMN trained with the TACoS: http://milabfile.snu.ac.kr:16000/detecting-incongruity/pretrained_weights/best_activitynet_rmmn.pth
+ (c) The RMMN trained with the TACoS: [RMMN_TACoS](http://milabfile.snu.ac.kr:16000/detecting-incongruity/pretrained_weights/best_activitynet_rmmn.pth)
 
  - You should locate the pre-trained weights to the weight folder: 'outputs/rmmn_original_$datasetname'.
 
