@@ -87,6 +87,10 @@ Before you run the scripts included in this repository, ensure you have the foll
 bash ./scripts/eval.sh 0
 ```
 
+ - This github page already includes "the ground-truth annotation file of each dataset (./RMMN/dataset)" and "the constructed three MVMR datasets (./RMMN/rmmn/mvmr/samples)".
+
+ - You can find "$datasetname_test_mvmr.json" file in "./RMMN/rmmn/mvmr/samples".
+
 
 ## Acknowledgments
 Parts of the code are modified versions from the [EMScore](https://github.com/ShiYaya/emscore) and [MMN](https://github.com/MCG-NJU/MMN.git). We thank the original authors for their work.
