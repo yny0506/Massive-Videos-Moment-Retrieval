@@ -15,7 +15,7 @@ Our proposed MVMR filters the positive video moment for a query from the whole v
 $`v^{+}_{i}`$ and $`v^{-}_{j}`$ mean a positive and a negative video, respectively.
 
 
-This github page includes (1) MVMR datasets construction code, and (2) MVMR evaluation code
+This github page includes (1) MVMR datasets construction code, and (2) MVMR evaluation code (Our RMMN training code will also be added ASAP)
 
 
 
