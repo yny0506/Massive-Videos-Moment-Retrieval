@@ -2,6 +2,7 @@ import json
 import torch
 from transformers import AutoModel, AutoTokenizer
 import argparse
+from tqdm import tqdm
 
 def load_dataset(path):
     with open(path, 'r') as file:
@@ -69,5 +70,3 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     main(args)
-
-#usage - python compute_sent_sim.py --dataset_path /home/minsungkim/MMN/MMN/dataset/Charades_STA/charades_test.json --dataset_name Charades_STA

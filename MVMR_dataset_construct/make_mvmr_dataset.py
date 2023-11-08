@@ -12,6 +12,13 @@ import clip
 import yaml
 import argparse
 
+# random.seed(42)
+original_tokenize = clip.tokenize
+def tokenize_with_truncation(*args, **kwargs):
+    kwargs['truncate'] = True 
+    return original_tokenize(*args, **kwargs)
+clip.tokenize = tokenize_with_truncation
+
 
 def load_config(config_path):
     with open(config_path, 'r') as file:

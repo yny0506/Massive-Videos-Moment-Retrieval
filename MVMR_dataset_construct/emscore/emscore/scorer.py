@@ -12,6 +12,13 @@ from collections import defaultdict
 
 from .utils import em_cos_score, get_idf_dict
 
+original_tokenize = clip.tokenize
+def tokenize_with_truncation(*args, **kwargs):
+    kwargs['truncate'] = True 
+    return original_tokenize(*args, **kwargs)
+clip.tokenize = tokenize_with_truncation
+
+
 class EMScorer:
     """
     EMScore Scorer Object.

@@ -6,12 +6,12 @@ Before you run the scripts included in this repository, ensure you have the foll
 
 - Pre-computed CLIP features for your dataset.
 
-You can download the pre-computed CLIP features from the following link: [Download CLIP features](#) *(coming soon)*.
+You can download the pre-computed CLIP features from the following link: [Download CLIP features](#https://drive.google.com/drive/u/0/folders/16BovXpyh7eX7xloQzF0Hy9-_zRUvHVlv) *(now only for charades, coming soon)*.
 
 After downloading, place the CLIP features in the following directory structure:
 
 ```plaintext
-- dataset
+- ../RMMN/dataset
   - {dataset_name}
     - {dataset_name}_clip_feats.pkl
 ```
@@ -30,7 +30,7 @@ pip install git+https://github.com/ShiYaya/CLIP
 
 First, you need to compute a sentence similarity matrix:
 ```bash
-python compute_sent_sim.py --dataset_path ../dataset/Charades_STA/charades_test.json --dataset_name Charades_STA
+python compute_sent_sim.py --dataset_path ../RMMN/dataset/Charades_STA/charades_test.json --dataset_name Charades_STA
 ```
 
 Then, construct the mvmr dataset

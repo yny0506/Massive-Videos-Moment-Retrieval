@@ -12,7 +12,7 @@ datasets:
     annos: '../RMMN/dataset/ActivityNet/test.json'
     sim_mat: 'similarity_matrix_ActivityNet_test.pt'
     clip_dict: '../RMMN/dataset/ActivityNet/Activitynet_CLIP_clip_feats.pkl'
-    output_file_name: 'charades_test_mvmr.json'
+    output_file_name: 'activitynet_test_mvmr.json'
     num_clips: 128
     max_pos_moments: 4
     max_num_retrieval_pool: 50
@@ -21,7 +21,7 @@ datasets:
     annos: '../RMMN/dataset/TACoS/test.json'
     sim_mat: 'similarity_matrix_TACoS_test.pt'
     clip_dict: '../RMMN/dataset/TACoS/TACoS_CLIP_clip_feats.pkl'
-    output_file_name: 'charades_test_mvmr.json'
+    output_file_name: 'tacos_test_mvmr.json'
     num_clips: 256
     max_pos_moments: 4
     max_num_retrieval_pool: 5
