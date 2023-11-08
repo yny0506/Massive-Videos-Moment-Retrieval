@@ -23,7 +23,7 @@ def get_embeddings(model, tokenizer, texts, device, batch_size):
     inputs = tokenizer(texts, padding=True, truncation=True, return_tensors="pt")
     embeddings = []
 
-    for i in range(0, len(inputs['input_ids']), batch_size):
+    for i in tqdm(range(0, len(inputs['input_ids']), batch_size)):
         input_ids = inputs['input_ids'][i:i+batch_size].to(device)
         attention_mask = inputs['attention_mask'][i:i+batch_size].to(device)
         batch_inputs = {'input_ids': input_ids, 'attention_mask': attention_mask}
