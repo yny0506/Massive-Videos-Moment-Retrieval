@@ -30,6 +30,8 @@ pip install git+https://github.com/ShiYaya/CLIP
 pip install yacs h5py opencv-python terminaltables transformers==4.29.2 safetensors==0.3.0
 ```
 
+We recommend creating a new conda env since there may be library conflicts.
+
 
 # MVMR dataset construction
 
