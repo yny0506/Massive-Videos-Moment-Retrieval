@@ -17,6 +17,8 @@ $`v^{+}_{i}`$ and $`v^{-}_{j}`$ mean a positive and a negative video, respective
 
 This github page includes (1) MVMR datasets construction code, and (2) MVMR evaluation code (Our RMMN training code will also be added ASAP)
 
+Although this repository includes the MVMR datasets construction code, you do not need to run them since it also contains the constructed three MVMR datasets. 
+
 
 ## Dependencies
 ```bash
