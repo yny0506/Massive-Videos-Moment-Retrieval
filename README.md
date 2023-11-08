@@ -86,15 +86,17 @@ Before you run the scripts included in this repository, ensure you have the foll
    
 
 ## Quick Start
- - You can start the evaluation code by running the bash file 'eval.sh', located in the scripts folder.
+ - You can start the evaluation code by running the python file 'test_net_mvmr.py'.
 
-```bash
-python test_net_mvmr.py --config-file configs/rmmn_original_charades.yaml --ckpt outputs/rmmn_original_charades/best_charades_rmmn.pth --sample_indices_info rmmn/mvmr/samples/charades_test_mvmr.json
-```
+ - Please remind that you should download the pre-trained weights and locate them using "--ckpt" parameter.
 
  - This github page already includes "the ground-truth annotation file of each dataset (./RMMN/dataset)" and "the constructed three MVMR datasets (./RMMN/rmmn/mvmr/samples)".
 
  - You can find the MVMR datasets ("$datasetname_test_mvmr.json") in "./RMMN/rmmn/mvmr/samples".
+
+```bash
+python test_net_mvmr.py --config-file configs/rmmn_original_charades.yaml --ckpt outputs/rmmn_original_charades/best_charades_rmmn.pth --sample_indices_info rmmn/mvmr/samples/charades_test_mvmr.json
+```
 
 
 ## Acknowledgments
