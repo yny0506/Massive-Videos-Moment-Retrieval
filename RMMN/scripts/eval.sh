@@ -1,15 +1,3 @@
-#!/bin/bash
-#SBATCH --job-name  eval
-#SBATCH --time      4-00:00:00
-#SBATCH -c          8
-#SBATCH --mem       200G
-#SBATCH --gpus      1
-#SBATCH --nodelist  a6k01
-
-source activate py39
-ml cudnn/8.2.0.53-11.3-cuda11.3
-
-
 dataset_name_idx=$1
 master_port=27512
 additional_name="mvmr_test"
