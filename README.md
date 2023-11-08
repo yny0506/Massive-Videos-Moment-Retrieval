@@ -18,6 +18,16 @@ $`v^{+}_{i}`$ and $`v^{-}_{j}`$ mean a positive and a negative video, respective
 This github page includes (1) MVMR datasets construction code, and (2) MVMR evaluation code (Our RMMN training code will also be added ASAP)
 
 
+## Dependencies
+```bash
+conda create -n rmmn python=3.9
+conda activate rmmn
+pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
+
+pip install git+https://github.com/ShiYaya/CLIP
+pip install yacs h5py opencv-python terminaltables transformers==4.29.2 safetensors==0.3.0
+```
+
 
 # MVMR dataset construction
 
@@ -32,19 +42,9 @@ You can download the pre-computed CLIP features from the following link: [Downlo
 After downloading, place the CLIP features in the following directory structure:
 
 ```plaintext
-- dataset
+- ../RMMN/dataset
   - {dataset_name}
     - {dataset_name}_clip_feats.pkl
-```
-
-## Installation
-
-To install the required libraries, run the following command:
-
-```bash
-conda install --yes -c pytorch pytorch=1.7.1 torchvision cudatoolkit=11.0
-pip install torch pyyaml argparse ftfy regex tqdm transformers
-pip install git+https://github.com/ShiYaya/CLIP
 ```
 
 ## Usage
@@ -83,22 +83,18 @@ Before you run the scripts included in this repository, ensure you have the foll
  - (c) The RMMN trained with the TACoS: [RMMN_TACoS](http://milabfile.snu.ac.kr:16000/detecting-incongruity/pretrained_weights/best_activitynet_rmmn.pth)
 
  - You should locate the pre-trained weights to the weight folder: 'outputs/rmmn_original_$datasetname'.
-
-## Dependencies
- - Our code is developed on the [MMN](https://github.com/MCG-NJU/MMN.git), thus you should download following libraries:
- - yacs, h5py, terminaltables, tqdm, pytorch, transformers 
-
+   
 
 ## Quick Start
  - You can start the evaluation code by running the bash file 'eval.sh', located in the scripts folder.
 
-```
-bash ./scripts/eval.sh 0
+```bash
+python test_net_mvmr.py --config-file configs/rmmn_original_charades.yaml --ckpt outputs/rmmn_original_charades/best_charades_rmmn.pth --sample_indices_info rmmn/mvmr/samples/charades_test_mvmr.json
 ```
 
  - This github page already includes "the ground-truth annotation file of each dataset (./RMMN/dataset)" and "the constructed three MVMR datasets (./RMMN/rmmn/mvmr/samples)".
 
- - You can find "$datasetname_test_mvmr.json" file in "./RMMN/rmmn/mvmr/samples".
+ - You can find the MVMR datasets ("$datasetname_test_mvmr.json") in "./RMMN/rmmn/mvmr/samples".
 
 
 ## Acknowledgments
