@@ -51,7 +51,7 @@ pip install git+https://github.com/ShiYaya/CLIP
 
 First, you need to compute a sentence similarity matrix:
 ```bash
-python compute_sent_sim.py --dataset_path ../dataset/Charades_STA/charades_test.json --dataset_name Charades_STA
+python compute_sent_sim.py --dataset_path ../RMMN/dataset/Charades_STA/charades_test.json --dataset_name Charades_STA
 ```
 
 Then, construct the mvmr dataset
