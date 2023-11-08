@@ -1,7 +1,7 @@
 datasets:
   charades:
     annos: '../RMMN/dataset/Charades_STA/charades_test.json'
-    sim_mat: 'sim_mat/similarity_matrix_Charades_STA_test.pt'
+    sim_mat: 'similarity_matrix_Charades_STA_test.pt'
     clip_dict: '../RMMN/dataset/Charades_STA/Charades_CLIP_clip_feats.pkl'
     output_file_name: 'charades_test_mvmr.json'
     num_clips: 32
@@ -10,7 +10,7 @@ datasets:
 
   activity_net:
     annos: '../RMMN/dataset/ActivityNet/test.json'
-    sim_mat: 'sim_mat/similarity_matrix_ActivityNet_test.pt'
+    sim_mat: 'similarity_matrix_ActivityNet_test.pt'
     clip_dict: '../RMMN/dataset/ActivityNet/Activitynet_CLIP_clip_feats.pkl'
     output_file_name: 'charades_test_mvmr.json'
     num_clips: 128
@@ -19,7 +19,7 @@ datasets:
 
   tacos:
     annos: '../RMMN/dataset/TACoS/test.json'
-    sim_mat: 'sim_mat/similarity_matrix_TACoS_test.pt'
+    sim_mat: 'similarity_matrix_TACoS_test.pt'
     clip_dict: '../RMMN/dataset/TACoS/TACoS_CLIP_clip_feats.pkl'
     output_file_name: 'charades_test_mvmr.json'
     num_clips: 256
