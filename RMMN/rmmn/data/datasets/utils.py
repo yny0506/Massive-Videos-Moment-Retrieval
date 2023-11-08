@@ -4,7 +4,6 @@ import h5py
 import numpy as np
 
 import torch
-import torchtext
 from torch.functional import F
 
 
@@ -138,19 +137,3 @@ def clip_embedding(sentence):
     word_lens = torch.ones(len(query_token)) * 77
     return query_token, word_lens.int()
 
-
-def glove_embedding(sentence, vocabs=[], embedders=[]):
-    if len(vocabs) == 0:
-        vocab = torchtext.vocab.pretrained_aliases["glove.840B.300d"]()
-        vocab.itos.extend(['<unk>'])
-        vocab.stoi['<unk>'] = vocab.vectors.shape[0]
-        vocab.vectors = torch.cat([vocab.vectors, torch.zeros(1, vocab.dim)], dim=0)
-        vocabs.append(vocab)
-    
-    if len(embedders) == 0:
-        embedder = torch.nn.Embedding.from_pretrained(vocab.vectors)
-        embedders.append(embedder)
-    
-    vocab, embedder = vocabs[0], embedders[0]
-    word_idxs = torch.tensor([vocab.stoi.get(w.lower(), 400000) for w in sentence.split()], dtype=torch.long)
-    return embedder(word_idxs)
