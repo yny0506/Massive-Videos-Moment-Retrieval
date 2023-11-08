@@ -132,12 +132,6 @@ def bert_embedding(cfg, sentence, tokenizer):
     queries = query_token['input_ids']
     return queries, word_lens
 
-import clip
-def clip_embedding(sentence):
-    query_token = clip.tokenize(sentence, truncate=True)
-    word_lens = torch.ones(len(query_token)) * 77
-    return query_token, word_lens.int()
-
 
 def glove_embedding(sentence, vocabs=[], embedders=[]):
     if len(vocabs) == 0:
