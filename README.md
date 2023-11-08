@@ -1,4 +1,4 @@
-# MVMR
+# MVMR task
 MVMR: Evaluating Natural Language Video Localization Bias over Multiple Reliable Videos Pool [arXiv](https://arxiv.org/pdf/2309.16701v1.pdf)
 
 Our work propose the MVMR (Massive Videos Moment Retrieval) task, which aims to localize video frames from a massive set of videos given a text query.
