@@ -6,7 +6,7 @@ Before you run the scripts included in this repository, ensure you have the foll
 
 - Pre-computed CLIP features for your dataset.
 
-You can download the pre-computed CLIP features from the following link: [Download CLIP features](#https://drive.google.com/drive/u/0/folders/16BovXpyh7eX7xloQzF0Hy9-_zRUvHVlv) *(now only for charades, coming soon)*.
+You can download the pre-computed CLIP features from the following link: [Download CLIP features](https://drive.google.com/drive/u/0/folders/16BovXpyh7eX7xloQzF0Hy9-_zRUvHVlv) *(now only for charades, coming soon)*.
 
 After downloading, place the CLIP features in the following directory structure:
 
