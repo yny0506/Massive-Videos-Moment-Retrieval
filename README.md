@@ -1,5 +1,5 @@
 # MVMR task
-MVMR: Evaluating Natural Language Video Localization Bias over Multiple Reliable Videos Pool 
+MVMR: Evaluating Natural Language Video Localization Bias over Multiple Reliable Videos Pool [arXiv](https://arxiv.org/pdf/2309.16701v1.pdf)
 
 Our work propose the MVMR (Massive Videos Moment Retrieval) task, which aims to localize video frames from a massive set of videos given a text query.
 For this task, we suggest methods for constructing datasets by employing similarity filtering on the existing video localization datasets and introduce three MVMR datasets.
@@ -80,11 +80,11 @@ Before you run the scripts included in this repository, ensure you have the foll
 2) The pre-trained weights of our RMMN
  - You can download the pre-trained weights for each dataset from the following link:
    
- - (a) The RMMN trained with the Charades-STA: **_We are not provide the weights in this annoymous github page to ensure the anonymity_**
+ - (a) The RMMN trained with the Charades-STA: [RMMN_Charades-STA](https://drive.google.com/file/d/16gl68U0M0TR-r-F8mjOlfy8l9ZmmM-G0/view?usp=share_link)
 
- - (b) The RMMN trained with the ActivityNet: **_We are not provide the weights in this annoymous github page to ensure the anonymity_**
+ - (b) The RMMN trained with the ActivityNet: [RMMN_ActivityNet](https://drive.google.com/file/d/1KceHtTq8XOXRrQwamWtJPPaqTZK6LnxY/view?usp=share_link)
  
- - (c) The RMMN trained with the TACoS: **_We are not provide the weights in this annoymous github page to ensure the anonymity_**
+ - (c) The RMMN trained with the TACoS: [RMMN_TACoS](https://drive.google.com/file/d/1fT6e4uWwLQnv5Irs1InevhLC4X-UFlv9/view?usp=share_link)
 
  - You should locate the pre-trained weights to the weight folder: 'outputs/rmmn_original_$datasetname'.
    
