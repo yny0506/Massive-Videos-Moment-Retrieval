@@ -80,11 +80,11 @@ Before you run the scripts included in this repository, ensure you have the foll
 2) The pre-trained weights of our RMMN
  - You can download the pre-trained weights for each dataset from the following link:
    
- - (a) The RMMN trained with the Charades-STA: _We are not provide the weights in this annoymous github page_ 
+ - (a) The RMMN trained with the Charades-STA: **_We are not provide the weights in this annoymous github page to ensure the anonymity_**
 
- - (b) The RMMN trained with the ActivityNet: _We are not provide the weights in this annoymous github page_ 
+ - (b) The RMMN trained with the ActivityNet: **_We are not provide the weights in this annoymous github page to ensure the anonymity_**
  
- - (c) The RMMN trained with the TACoS: _We are not provide the weights in this annoymous github page_ 
+ - (c) The RMMN trained with the TACoS: **_We are not provide the weights in this annoymous github page to ensure the anonymity_**
 
  - You should locate the pre-trained weights to the weight folder: 'outputs/rmmn_original_$datasetname'.
    
