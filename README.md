@@ -1,5 +1,7 @@
 # MVMR: A New Framework for Evaluating Faithfulness of Video Moment Retrieval against Multiple Distractors
 
+arXiv Link [arXiv](https://arxiv.org/pdf/2309.16701v1.pdf)
+
 This github page includes (1) MVMR datasets construction code, and (2) MVMR evaluation code (Our CroCs training code will also be added ASAP)
 
 Although this repository includes the MVMR datasets construction code, you do not need to run them since it also contains the constructed three MVMR datasets. 
@@ -63,16 +65,13 @@ Before you run the scripts included in this repository, ensure you have the foll
  - You can find the uploaded ground-truth annotation file of each dataset in the 'dataset' folder. These files are the ground-truth files of [2D-TAN](https://github.com/microsoft/2D-TAN).
 
 2) The pre-trained weights of our CroCs
-
-!!We are not providing CroCs pre-trained weights to comply with the annonymity regulation for this CIKM 2024 submission!!
-
  - You can download the pre-trained weights for each dataset from the following link:
    
- - (a) The CroCs trained with the Charades-STA: [CroCs_Charades-STA]
+ - (a) The CroCs trained with the Charades-STA: [CroCs_Charades-STA](https://drive.google.com/file/d/16gl68U0M0TR-r-F8mjOlfy8l9ZmmM-G0/view?usp=share_link)
 
- - (b) The CroCs trained with the ActivityNet: [CroCs_ActivityNet]
+ - (b) The CroCs trained with the ActivityNet: [CroCs_ActivityNet](https://drive.google.com/file/d/1KceHtTq8XOXRrQwamWtJPPaqTZK6LnxY/view?usp=share_link)
  
- - (c) The CroCs trained with the TACoS: [CroCs_TACoS]
+ - (c) The CroCs trained with the TACoS: [CroCs_TACoS](https://drive.google.com/file/d/1fT6e4uWwLQnv5Irs1InevhLC4X-UFlv9/view?usp=share_link)
 
  - You should locate the pre-trained weights to the weight folder: 'outputs/crocs_original_$datasetname'.
    
