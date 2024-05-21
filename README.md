@@ -1,5 +1,4 @@
-# MVMR task
-MVMR: A New Framework for Evaluating Faithfulness of Video Moment Retrieval against Multiple Distractors
+# MVMR: A New Framework for Evaluating Faithfulness of Video Moment Retrieval against Multiple Distractors
 
 Abstract: With the explosion of multimedia content, video moment retrieval (VMR), which aims to detect a video moment that matches a given text query from a video, has been studied intensively as a critical problem.
 However, the existing VMR framework evaluates video moment retrieval performance, assuming that a video is given, which may not reveal whether the models exhibit overconfidence in the falsely given video.
