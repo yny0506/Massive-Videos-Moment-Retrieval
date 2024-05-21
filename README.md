@@ -8,7 +8,7 @@ In this paper, we propose the MVMR (Massive Videos Moment Retrieval for Faithful
 For this task, we suggest an automated massive video pool construction framework to categorize negative (distractors) and positive (false-negative) video sets using textual and visual semantic distance verification methods. We extend existing VMR datasets using these methods and newly construct three practical MVMR datasets.
 To solve the task, we further propose a strong informative sample-weighted learning method, CroCs, which employs two contrastive learning mechanisms: (1) weakly-supervised potential negative learning and (2) cross-directional hard-negative learning. 
 Experimental results on the MVMR datasets reveal that existing VMR models are easily distracted by the misinformation (distractors), whereas our model shows significantly robust performance, demonstrating that CroCs is essential to distinguishing positive moments against distractors.
---
+
 
 This github page includes (1) MVMR datasets construction code, and (2) MVMR evaluation code (Our CroCs training code will also be added ASAP)
 
