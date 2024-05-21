@@ -1,13 +1,5 @@
 # MVMR: A New Framework for Evaluating Faithfulness of Video Moment Retrieval against Multiple Distractors
 
-Abstract: With the explosion of multimedia content, video moment retrieval (VMR), which aims to detect a video moment that matches a given text query from a video, has been studied intensively as a critical problem.
-However, the existing VMR framework evaluates video moment retrieval performance, assuming that a video is given, which may not reveal whether the models exhibit overconfidence in the falsely given video.
-In this paper, we propose the MVMR (Massive Videos Moment Retrieval for Faithfulness Evaluation) task that aims to retrieve video moments within a massive video set, including multiple distractors, to evaluate the faithfulness of VMR models.
-For this task, we suggest an automated massive video pool construction framework to categorize negative (distractors) and positive (false-negative) video sets using textual and visual semantic distance verification methods. We extend existing VMR datasets using these methods and newly construct three practical MVMR datasets.
-To solve the task, we further propose a strong informative sample-weighted learning method, CroCs, which employs two contrastive learning mechanisms: (1) weakly-supervised potential negative learning and (2) cross-directional hard-negative learning. 
-Experimental results on the MVMR datasets reveal that existing VMR models are easily distracted by the misinformation (distractors), whereas our model shows significantly robust performance, demonstrating that CroCs is essential to distinguishing positive moments against distractors.
-
-
 This github page includes (1) MVMR datasets construction code, and (2) MVMR evaluation code (Our CroCs training code will also be added ASAP)
 
 Although this repository includes the MVMR datasets construction code, you do not need to run them since it also contains the constructed three MVMR datasets. 
