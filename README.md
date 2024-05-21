@@ -1,10 +1,10 @@
 # MVMR task
-MVMR: Evaluating Natural Language Video Localization Bias over Multiple Reliable Videos Pool [arXiv](https://arxiv.org/pdf/2309.16701v1.pdf)
+MVMR: A New Framework for Evaluating Faithfulness of Video Moment Retrieval against Multiple Distractors [arXiv](https://arxiv.org/pdf/2309.16701v1.pdf)
 
-Our work propose the MVMR (Massive Videos Moment Retrieval) task, which aims to localize video frames from a massive set of videos given a text query.
+Our work proposes the MVMR (Massive Videos Moment Retrieval) task, which aims to localize video frames from a massive set of videos given a text query.
 For this task, we suggest methods for constructing datasets by employing similarity filtering on the existing video localization datasets and introduce three MVMR datasets.
 Specifically, we employ embedding-based text similarity matching and videolanguage grounding techniques to calculate the relevance score between a target query and videos to define positive and negative sets.
-For the proposed MVMR task, we further develop a strong model, Reliable Mutual Matching Network (RMMN), which employs a contrastive learning scheme that selectively filters the reliable and informative negatives leading the model more robust on the MVMR task.
+For the proposed MVMR task, we further develop a strong model, CroCs, which employs a contrastive learning scheme that selectively filters the reliable and informative negatives leading the model more robust on the MVMR task.
 
 
 ![image](https://github.com/yny0506/MVMR/assets/107698204/e3c7bde6-e79d-4a24-b9dd-d9456fecde14)
@@ -15,15 +15,15 @@ Our proposed MVMR filters the positive video moment for a query from the whole v
 $`v^{+}_{i}`$ and $`v^{-}_{j}`$ mean a positive and a negative video, respectively.
 
 
-This github page includes (1) MVMR datasets construction code, and (2) MVMR evaluation code (Our RMMN training code will also be added ASAP)
+This github page includes (1) MVMR datasets construction code, and (2) MVMR evaluation code (Our CroCs training code will also be added ASAP)
 
 Although this repository includes the MVMR datasets construction code, you do not need to run them since it also contains the constructed three MVMR datasets. 
 
 
 ## Dependencies
 ```bash
-conda create -n rmmn python=3.9
-conda activate rmmn
+conda create -n mvmr python=3.9
+conda activate mvmr
 pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
 
 pip install git+https://github.com/ShiYaya/CLIP
@@ -46,7 +46,7 @@ You can download the pre-computed CLIP features from the following link: [Downlo
 After downloading, place the CLIP features in the following directory structure:
 
 ```plaintext
-- ../RMMN/dataset
+- ../MVMR/dataset
   - {dataset_name}
     - {dataset_name}_clip_feats.pkl
 ```
@@ -55,10 +55,10 @@ After downloading, place the CLIP features in the following directory structure:
 
 First, you need to compute a sentence similarity matrix:
 ```bash
-python compute_sent_sim.py --dataset_path ../RMMN/dataset/Charades_STA/charades_test.json --dataset_name Charades_STA
+python compute_sent_sim.py --dataset_path ../MVMR/dataset/Charades_STA/charades_test.json --dataset_name Charades_STA
 ```
 
-Then, construct the mvmr dataset
+Then, construct the MVMR dataset
 ```bash
 python make_mvmr_dataset.py
 ```
@@ -77,29 +77,29 @@ Before you run the scripts included in this repository, ensure you have the foll
 
  - You can find the uploaded ground-truth annotation file of each dataset in the 'dataset' folder. These files are the ground-truth files of [2D-TAN](https://github.com/microsoft/2D-TAN).
 
-2) The pre-trained weights of our RMMN
+2) The pre-trained weights of our CroCs
  - You can download the pre-trained weights for each dataset from the following link:
    
- - (a) The RMMN trained with the Charades-STA: [RMMN_Charades-STA](https://drive.google.com/file/d/16gl68U0M0TR-r-F8mjOlfy8l9ZmmM-G0/view?usp=share_link)
+ - (a) The CroCs trained with the Charades-STA: [CroCs_Charades-STA](https://drive.google.com/file/d/16gl68U0M0TR-r-F8mjOlfy8l9ZmmM-G0/view?usp=share_link)
 
- - (b) The RMMN trained with the ActivityNet: [RMMN_ActivityNet](https://drive.google.com/file/d/1KceHtTq8XOXRrQwamWtJPPaqTZK6LnxY/view?usp=share_link)
+ - (b) The CroCs trained with the ActivityNet: [CroCs_ActivityNet](https://drive.google.com/file/d/1KceHtTq8XOXRrQwamWtJPPaqTZK6LnxY/view?usp=share_link)
  
- - (c) The RMMN trained with the TACoS: [RMMN_TACoS](https://drive.google.com/file/d/1fT6e4uWwLQnv5Irs1InevhLC4X-UFlv9/view?usp=share_link)
+ - (c) The CroCs trained with the TACoS: [CroCs_TACoS](https://drive.google.com/file/d/1fT6e4uWwLQnv5Irs1InevhLC4X-UFlv9/view?usp=share_link)
 
- - You should locate the pre-trained weights to the weight folder: 'outputs/rmmn_original_$datasetname'.
+ - You should locate the pre-trained weights to the weight folder: 'outputs/crocs_original_$datasetname'.
    
 
 ## Quick Start
  - You can start the evaluation code by running the python file 'test_net_mvmr.py'.
 
- - Please remind that you should download the pre-trained weights and locate them using "--ckpt" parameter.
+ - Please remember that you should download the pre-trained weights and locate them using "--ckpt" parameter.
 
- - This github page already includes "the ground-truth annotation file of each dataset (./RMMN/dataset)" and "the constructed three MVMR datasets (./RMMN/rmmn/mvmr/samples)".
+ - This github page already includes "the ground-truth annotation file of each dataset (./MVMR/dataset)" and "the constructed three MVMR datasets (./MVMR/crocs/mvmr/samples)".
 
- - You can find the MVMR datasets ("$datasetname_test_mvmr.json") in "./RMMN/rmmn/mvmr/samples".
+ - You can find the MVMR datasets ("$datasetname_test_mvmr.json") in "./MVMR/crocs/mvmr/samples".
 
 ```bash
-python test_net_mvmr.py --config-file configs/rmmn_original_charades.yaml --ckpt outputs/rmmn_original_charades/best_charades_rmmn.pth --sample_indices_info rmmn/mvmr/samples/charades_test_mvmr.json
+python test_net_mvmr.py --config-file configs/crocs_original_charades.yaml --ckpt outputs/crocs_original_charades/best_charades_crocs.pth --sample_indices_info crocs/mvmr/samples/charades_test_mvmr.json
 ```
 
 
