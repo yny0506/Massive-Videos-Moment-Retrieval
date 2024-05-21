@@ -1,0 +1,31 @@
+datasets:
+  charades:
+    annos: '../RMMN/dataset/Charades_STA/charades_test.json'
+    sim_mat: 'similarity_matrix_Charades_STA_test.pt'
+    clip_dict: '../RMMN/dataset/Charades_STA/Charades_CLIP_clip_feats.pkl'
+    output_file_name: 'charades_test_mvmr.json'
+    num_clips: 32
+    max_pos_moments: 4
+    max_num_retrieval_pool: 50
+
+  activity_net:
+    annos: '../RMMN/dataset/ActivityNet/test.json'
+    sim_mat: 'similarity_matrix_ActivityNet_test.pt'
+    clip_dict: '../RMMN/dataset/ActivityNet/Activitynet_CLIP_clip_feats.pkl'
+    output_file_name: 'activitynet_test_mvmr.json'
+    num_clips: 128
+    max_pos_moments: 4
+    max_num_retrieval_pool: 50
+
+  tacos:
+    annos: '../RMMN/dataset/TACoS/test.json'
+    sim_mat: 'similarity_matrix_TACoS_test.pt'
+    clip_dict: '../RMMN/dataset/TACoS/TACoS_CLIP_clip_feats.pkl'
+    output_file_name: 'tacos_test_mvmr.json'
+    num_clips: 256
+    max_pos_moments: 4
+    max_num_retrieval_pool: 5
+
+thresholds:
+  positive: 0.9
+  negative: 0.5
