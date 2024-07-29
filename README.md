@@ -1,5 +1,7 @@
 # MVMR: A New Framework for Evaluating Faithfulness of Video Moment Retrieval against Multiple Distractors
 
+We are thrilled to inform you that our paper has been accepted to [CIKM 2024](https://cikm2024.org/)!
+
 arXiv Link [arXiv](https://arxiv.org/pdf/2309.16701v1.pdf)
 
 This github page includes (1) MVMR datasets construction code, and (2) MVMR evaluation code (Our CroCs training code will also be added ASAP)
